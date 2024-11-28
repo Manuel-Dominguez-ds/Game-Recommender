@@ -39,10 +39,10 @@ def generate_recommendations_streamlit(user_id, svd, recommendations_data, games
 
     return result
 
-svd_sample = joblib.load("svd_sample.joblib")
+svd_sample = joblib.load("svd_sample3.joblib")
 
 # Configurar lista de ítems y usuarios
-recommendations_data = pd.read_parquet('recommendations.gzip')
+recommendations_data = pd.read_parquet('recommendations_sample.csv')
 games_data_merged = pd.read_csv('games_data_merged.csv')
 
 user_ids = recommendations_data['user_id'].unique()
